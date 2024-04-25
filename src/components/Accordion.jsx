@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { getIconUrl } from '../API';
 
 const Accordion = ({ item, tempUnit }) => {
   const [accordionOpen, setAccordionOpen] = useState(false);
@@ -21,7 +22,7 @@ const Accordion = ({ item, tempUnit }) => {
       <div className="dark:bg-[#292929] bg-[#e3e3e3] mx-2 rounded-md shadow-xl">
         <div className="cursor-pointer flex items-center justify-between" onClick={toggleAccordion}>
           <div className='flex items-center justify-center'>
-            <img src={`./src/assets/weatherIcons/${item.weather[0].icon}.svg`} alt={item.weather[0].description} className='w-12 ml-1 svgIcon' />
+            <img src={getIconUrl(item.weather[0].icon)} alt={item.weather[0].description} className='w-12 ml-1 svgIcon' />
             <p className='ml-1'>{formatDate(item.dt)}</p>
           </div>
           <div className='flex items-center justify-center'>

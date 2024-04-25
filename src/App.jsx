@@ -14,7 +14,7 @@ function App() {
     const link = document.querySelector("link[rel*='icon']") || document.createElement('link');
     link.type = 'image/x-icon';
     link.rel = 'shortcut icon';
-    link.href = `./src/assets/logo.svg`;
+    link.href = `/src/assets/logo.svg`;
     document.head.appendChild(link); 
   });
 
