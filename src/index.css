@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    user-drag: none;
+    -webkit-app-region: no-drag;
+}
+
+.hindi {
+    font-family: "Yatra One", system-ui;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+* {
+    @apply transition-colors duration-200;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+ 
+::-webkit-scrollbar-track {
+    background: #363636;
+}
+ 
+::-webkit-scrollbar-thumb {
+    background: #BDBDBD;
+    border-radius: 5px;
+}
+ 
+::-webkit-scrollbar-thumb:hover {
+    background: #303030;
+}
+
+
+.customScrollbar {
+    scrollbar-width: thin; 
+    scrollbar-color: #BDBDBD #363636;
+}
+
+
+@media (max-width: 467px) {
+    .wasd {
+        margin-top: 0;
+    }
+
+    .wasdw {
+        padding: 0;
+        margin-right: 10px;
+        margin-top: 120px;
+    }
+}
+
+@media (max-width: 406px) {
+    .wasd {
+        margin-top: 0;
+    }
+
+    .wasdw {
+        padding: 0;
+        margin-right: 10px;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 505px) {
+    .search {
+        width: 80vw;
+    }
+}
+
+@media (max-width: 371px) {
+    .search {
+        width: 90vw;
+    }
+}
+
+@media (max-width: 425px) {
+    .card {
+        width: 150px;
+    }
+}
+
+@media (max-width: 634px) {
+    .accordion {
+        font-size: 12px;
+        font-weight: normal;
+    }
+
+    .svgIcon {
+        width: 40px;
+    }
+}
+
+@media (max-width: 455px) {
+    .www {
+        width: 90vw;
+        margin-top: 0;
+    }
+
+    .wasdw {
+        margin-top: 0;
+    } 
+}
