@@ -17,7 +17,7 @@ export const DAILY_FORECAST_OpenWeather_API_URL = `https://api.openweathermap.or
 
 export function getIconUrl(iconCode) {
 	const baseIconUrl = 'https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/';
-	const defaultUrl = './src/assets/weatherIcons/';
+	const defaultUrl = '../assets/weatherIcons/';
 	switch(iconCode) {
 			case '01d':
 					return `${baseIconUrl}clear-day.svg` || `${defaultUrl}01d.svg`;

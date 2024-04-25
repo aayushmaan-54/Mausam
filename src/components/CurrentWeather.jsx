@@ -69,9 +69,9 @@ const CurrentWeather = ({ city, metric, setForecast, forecast }) => {
     const link = document.querySelector("link[rel*='icon']") || document.createElement('link');
     link.type = 'image/x-icon';
     link.rel = 'shortcut icon';
-    link.href = getIconUrl(weather?.weather[0]?.icon) || `./src/assets/logo.svg`;
+    link.href = getIconUrl(weather?.weather[0]?.icon) || `/src/assets/logo.svg`;
     document.head.appendChild(link); 
-  }, [City, weather, metric]);
+  }, [City, weather, metric, forecast]);
   
   function getCityData() {
     const url = metric
@@ -90,13 +90,13 @@ const CurrentWeather = ({ city, metric, setForecast, forecast }) => {
           <div className="flex justify-around dark:bg-[#292929] bg-[#e3e3e3] font-bold w-fit px-8 py-6 rounded-lg flex-wrap shadow-xl www">
             <div className="flex flex-col">
               {City[0]?.city ? (
-                <a href={`https://www.wikidata.org/wiki/${City[0].wikiID}`} className="wasd text-xl mt-10">
+                <a href={`https://www.wikidata.org/wiki/${City[0].wikiID}`} className="wasd text-xl mt-10" target='_blank'>
                   {City[0].city}, {City[0].countryCode}🔗
                 </a>
               ) : (
                 <>
                   {backupCity ? (
-                    <a href={`https://en.wikipedia.org/wiki/${backupCity.name}`} className="wasd text-xl mt-10">
+                    <a href={`https://en.wikipedia.org/wiki/${backupCity.name}`} className="wasd text-xl mt-10" target='_blank'>
                       {backupCity.name}, {backupCity.sys.country}🔗
                     </a>
                   ) : null}
